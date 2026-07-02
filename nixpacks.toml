@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["nodejs", "python311"]
+
+[phases.install]
+cmds = [
+  "pip install -r namma_agent/requirements.txt",
+  "cd namma_agent/webui && npm install && npm run build"
+]
+
+[start]
+cmd = "python -m namma_agent --server"
