@@ -67,14 +67,15 @@ git push -u origin main
 | **Branch** | `main` |
 | **Runtime** | `Python 3` |
 | **Build Command** | `pip install -r namma_agent/requirements.txt && cd namma_agent/webui && npm install && npm run build` |
-| **Start Command** | `python -m namma_agent --server --host 0.0.0.0 --port $PORT` |
+| **Start Command** | `python -m namma_agent --server` |
 | **Instance Type** | **Free** |
 
 **Add Environment Variables** (click "Add Environment Variable"):
 
 1. `OPENAI_API_KEY` = `YOUR_OPENROUTER_API_KEY_HERE`
 2. `OPENAI_BASE_URL` = `https://openrouter.ai/api/v1`
-3. `PYTHON_VERSION` = `3.11.0`
+3. `HOST` = `0.0.0.0`
+4. `PYTHON_VERSION` = `3.11.0`
 
 **Click "Create Web Service"**
 
