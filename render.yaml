@@ -9,10 +9,12 @@ services:
       cd namma_agent/webui &&
       npm install &&
       npm run build
-    startCommand: python -m namma_agent --server --host 0.0.0.0 --port $PORT
+    startCommand: python -m namma_agent --server
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
+      - key: HOST
+        value: 0.0.0.0
       - key: OPENAI_API_KEY
         sync: false
       - key: OPENAI_BASE_URL

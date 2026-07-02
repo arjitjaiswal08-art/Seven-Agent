@@ -23,7 +23,7 @@ from namma_agent.core.logger import configure_logging, logger
 from namma_agent.service import NammaAgentService
 from namma_agent.version import __version__
 
-_HOST = "127.0.0.1"
+_HOST = os.environ.get("HOST", "127.0.0.1")
 _PORT = int(os.environ.get("PORT", 8000))
 _URL = f"http://{_HOST}:{_PORT}"
 
